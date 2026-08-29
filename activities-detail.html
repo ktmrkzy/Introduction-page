@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活動歴 - 自己紹介</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo" id="siteName">My Portfolio</h1>
+            <ul class="nav-links">
+                <li><a href="index.html#about">プロフィール</a></li>
+                <li><a href="index.html#skills">スキル</a></li>
+                <li><a href="index.html#activities">活動歴</a></li>
+                <li><a href="index.html#presentations">対外発表</a></li>
+                <li><a href="index.html#experience">経歴</a></li>
+                <li><a href="index.html#links">リンク</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 詳細セクション -->
+    <section class="detail-section">
+        <div class="container">
+            <div class="detail-header">
+                <h2>活動歴</h2>
+                <a href="index.html" class="back-link">← 戻る</a>
+            </div>
+            <div class="detail-list" id="activitiesContainer">
+                <!-- JSONから動的に生成されます -->
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <p id="footerText">&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JSONファイルを読み込む関数
+        async function loadJSON(path) {
+            try {
+                const response = await fetch(path);
+                if (!response.ok) {
+                    throw new Error(`HTTPエラー! ステータス: ${response.status}`);
+                }
+                return await response.json();
+            } catch (error) {
+                console.error(`${path}の読み込みに失敗しました:`, error);
+                return {};
+            }
+        }
+
+        // サイト名を読み込む
+        async function loadSiteName() {
+            const profileData = await loadJSON('datas/profile.json');
+            document.getElementById('siteName').textContent = profileData.siteName || 'My Portfolio';
+            document.getElementById('footerText').textContent = profileData.footer || '© 2024 My Portfolio. All rights reserved.';
+        }
+
+        // 活動歴を描画
+        async function renderActivities() {
+            const data = await loadJSON('datas/activities.json');
+            const container = document.getElementById('activitiesContainer');
+            container.innerHTML = '';
+
+            if (data.activities && Array.isArray(data.activities)) {
+                // 逆順で表示
+                const reversedActivities = data.activities.reverse();
+                reversedActivities.forEach((activity, index) => {
+                    const activityItem = document.createElement('div');
+                    activityItem.className = 'detail-item';
+                    activityItem.innerHTML = `
+                        <div class="detail-card">
+                            <div class="detail-number">${String(index + 1).padStart(3, '0')}</div>
+                            <div class="detail-content">
+                                <div class="detail-date">${activity.date}</div>
+                                <h3>${activity.title}</h3>
+                                <p>${activity.description}</p>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(activityItem);
+                });
+            }
+        }
+
+        // ページロード時に実行
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSiteName();
+            renderActivities();
+        });
+    </script>
+</body>
+</html>

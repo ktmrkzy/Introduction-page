@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己紹介</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo" id="siteName">My Portfolio</h1>
+            <ul class="nav-links">
+                <li><a href="#about">プロフィール</a></li>
+                <li><a href="#skills">スキル</a></li>
+                <li><a href="#activities">活動歴</a></li>
+                <li><a href="#presentations">対外発表</a></li>
+                <li><a href="#experience">経歴</a></li>
+                <li><a href="#links">リンク</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ヘッダーセクション -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 id="mainTitle">ようこそ</h2>
+                <p id="mainSubtitle">あなたの名前または職業</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- プロフィールセクション -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>プロフィール</h2>
+            <div class="profile-content">
+                <!-- スライドショー -->
+                <div class="slideshow-container" id="slideshowContainer">
+                    <!-- JSONから動的に生成されます -->
+                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                    <div class="dots" id="dotsContainer">
+                        <!-- JSONから動的に生成されます -->
+                    </div>
+                </div>
+
+                <!-- プロフィール情報 -->
+                <div class="profile-info">
+                    <div class="profile-item">
+                        <h3>名前</h3>
+                        <p id="profileName">山田太郎</p>
+                    </div>
+                    <div class="profile-item">
+                        <h3>所属</h3>
+                        <p id="profileAffiliation">◯◯大学 情報学部</p>
+                    </div>
+                    <div class="profile-item">
+                        <h3>趣味</h3>
+                        <p id="profileHobbies">プログラミング、読書、ハイキング</p>
+                    </div>
+                    <div class="profile-item full-width">
+                        <h3>コメント</h3>
+                        <p id="profileComment">
+                            これは自己紹介ページのテンプレートです。
+                            datas/profile.jsonを編集して情報を更新できます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- スキルセクション -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>スキル</h2>
+            <div class="skills-grid" id="skillsContainer">
+                <!-- JSONから動的に生成されます -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 活動歴セクション -->
+    <section id="activities" class="activities">
+        <div class="container">
+            <h2>活動歴</h2>
+            <div class="timeline" id="activitiesContainer">
+                <!-- JSONから動的に生成されます -->
+            </div>
+            <div class="more-button-container">
+                <a href="activities-detail.html" class="more-button">もっと見る →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 対外発表セクション -->
+    <section id="presentations" class="presentations">
+        <div class="container">
+            <h2>対外発表</h2>
+            <div class="presentations-list" id="presentationsContainer">
+                <!-- JSONから動的に生成されます -->
+            </div>
+            <div class="more-button-container">
+                <a href="presentations-detail.html" class="more-button">もっと見る →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 経歴セクション -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>経歴</h2>
+            <div class="experience-list" id="experienceContainer">
+                <!-- JSONから動的に生成されます -->
+            </div>
+            <div class="more-button-container">
+                <a href="experience-detail.html" class="more-button">もっと見る →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- リンクセクション -->
+    <section id="links" class="links">
+        <div class="container">
+            <h2>リンク</h2>
+            <div class="links-grid" id="linksContainer">
+                <!-- JSONから動的に生成されます -->
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <p id="footerText">&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- スキル詳細モーダル -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSkillModal()">&times;</span>
+            <h2 id="modalSkillName">スキル名</h2>
+            <div class="skill-level">
+                <span>レベル: </span>
+                <span id="modalSkillLevel">上級</span>
+            </div>
+            <img id="modalSkillImage" class="modal-image" src="" alt="スキルイメージ" style="display: none;">
+            <div id="modalSkillDetail">詳しい説明</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

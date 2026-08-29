@@ -1,0 +1,22 @@
+{
+  "presentations": [
+    {
+      "date": "2021年3月16日",
+      "title": "音信号の量子化における確率共鳴のノイズ種類による性能評価",
+      "description": "音信号の量子化における確率共鳴のノイズ種類による性能評価について発表しました。<br>この研究では、音信号の量子化において確率共鳴がどのように影響するかを調査し、異なる確率分布を持つノイズ種類が性能に与える影響を評価しました。",
+      "venue": " 日本機械学会 関西学生会2020年度学生員卒業研究発表講演会"
+    },
+    {
+      "date": "2023年3月7日",
+      "title": "生体情報計測を用いた増粘多糖類溶液のレオロジー特性が情動に与える影響評価",
+      "description": "In daily life, scenarios of skin contact with liquids have become increasingly diverse, and liquids having various properties are being handled. Therefore, many studies have reported the influence of liquid properties on human sensibility. Many studies have been conducted on the influence of the rheological properties of liquids, which affect tactile sensation during application, using sensory indices based on questionnaires. In this study, the influence of the rheological properties of liquids on the tactile sensibility was investigated in terms of the cerebral blood flow and electrocardiographic bioindicators. The results of the study showed significant differences in the cerebral blood flow depending on the conditions. Furthermore, the results of the correlation analysis between the questionnaire and biological information suggested the possibility of using biological information to evaluate the comfort of liquid applications.",
+      "venue": "IIP 情報・知能・精密機器部門講演会"
+    },
+    {
+      "date": "2023年",
+      "title": "複合冷凍菓子の水分量の違いが感性に及ぼす影響",
+      "description": "This study investigated the physiological and psychological effects of different monaka ice cream textures by simultaneously measuring biological responses and subjective evaluations during consumption. Low-water-content monaka shells significantly increased right-hemisphere cerebral blood flow and engaged slower muscle fibers during chewing, whereas high-water-content shells required stronger mastication force and triggered larger shifts in immediate emotions. Overall, the findings suggest that lower water content in monaka shells promotes a more relaxed and pleasant state by directly altering neural, muscular, and emotional responses.",
+      "venue": "日本機械学会"
+    }
+  ]
+}

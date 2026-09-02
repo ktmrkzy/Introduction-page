@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>経歴 - 自己紹介</title>
+    <title>Experience - Self-Introduction</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
@@ -12,12 +12,12 @@
         <div class="container">
             <h1 class="logo" id="siteName">My Portfolio</h1>
             <ul class="nav-links">
-                <li><a href="index.html#about">プロフィール</a></li>
-                <li><a href="index.html#skills">スキル</a></li>
-                <li><a href="index.html#activities">活動歴</a></li>
-                <li><a href="index.html#presentations">対外発表</a></li>
-                <li><a href="index.html#experience">経歴</a></li>
-                <li><a href="index.html#links">リンク</a></li>
+                <li><a href="index.html#about">Profile</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#activities">Activities</a></li>
+                <li><a href="index.html#presentations">Presentations</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#links">Links</a></li>
             </ul>
         </div>
     </nav>
@@ -26,8 +26,8 @@
     <section class="detail-section">
         <div class="container">
             <div class="detail-header">
-                <h2>経歴</h2>
-                <a href="index.html" class="back-link">← 戻る</a>
+                <h2>Experience</h2>
+                <a href="index.html" class="back-link">← Back</a>
             </div>
             <div class="detail-list" id="experienceContainer">
                 <!-- JSONから動的に生成されます -->
@@ -38,7 +38,7 @@
     <!-- フッター -->
     <footer class="footer">
         <div class="container">
-            <p id="footerText">&copy; 2024 My Portfolio. All rights reserved.</p>
+            <p id="footerText">&copy; 2026 My Portfolio. All rights reserved.</p>
         </div>
     </footer>
 
@@ -48,11 +48,11 @@
             try {
                 const response = await fetch(path);
                 if (!response.ok) {
-                    throw new Error(`HTTPエラー! ステータス: ${response.status}`);
+                    throw new Error(`HTTP Error! Status: ${response.status}`);
                 }
                 return await response.json();
             } catch (error) {
-                console.error(`${path}の読み込みに失敗しました:`, error);
+                console.error(`${path} failed to load:`, error);
                 return {};
             }
         }
@@ -61,7 +61,7 @@
         async function loadSiteName() {
             const profileData = await loadJSON('datas/profile.json');
             document.getElementById('siteName').textContent = profileData.siteName || 'My Portfolio';
-            document.getElementById('footerText').textContent = profileData.footer || '© 2024 My Portfolio. All rights reserved.';
+            document.getElementById('footerText').textContent = profileData.footer || '© 2026 My Portfolio. All rights reserved.';
         }
 
         // 経歴を描画

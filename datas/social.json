@@ -4,25 +4,25 @@
       "name": "GitHub",
       "icon": "👨‍💻",
       "url": "https://github.com/ktmrkzy",
-      "description": "趣味コードの公開<br>仕事上のコードは非公開"
+      "description": "Personal code repositories<br>Work-related code is private"
     },
     {
       "name": "Email",
       "icon": "📧",
       "url": "mailto:katsumura.kazuya@sys-lab.org",
-      "description": "お問い合わせ"
+      "description": "Contact"
     },
     {
       "name": "LinkedIn",
       "icon": "💼",
       "url": "https://www.linkedin.com/in/kazuya-katsumura-30bba1427/",
-      "description": "プロフェッショナル情報"
+      "description": "Professional profile"
     },
     {
       "name": "Note",
       "icon": "📖",
       "url": "https://note.com/kz_daily_log",
-      "description": "雑多なブログ"
+      "description": "Personal blog"
     }
   ]
 }

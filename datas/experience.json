@@ -1,19 +1,19 @@
 {
   "experience": [
     {
-      "period": "2017年4月 - 2021年3月",
-      "title": "大阪工業大学 工学部 機械工学科",
-      "description": "機械工学を専攻"
+      "period": "Apr 2017 - Mar 2021",
+      "title": "Department of Mechanical Engineering, Faculty of Engineering, Osaka Institute of Technology",
+      "description": "Majored in Mechanical Engineering."
     },
     {
-      "period": "2021年4月 - 2023年3月",
-      "title": "埼玉大学大学院 理工学研究科 機械科学系専攻",
-      "description": "医療機器開発や感性に関わる共同研究に従事"
+      "period": "Apr 2021 - Mar 2023",
+      "title": "Division of Mechanical Science, Graduate School of Science and Engineering, Saitama University",
+      "description": "Engaged in joint research related to medical device development and Kansei engineering."
     },
     {
-      "period": "2023年4月 - 現在",
-      "title": "株式会社ニコン 数理技術研究所",
-      "description": "企業でデータサイエンスや機械学習の研究開発に従事"
+      "period": "Apr 2023 - Present",
+      "title": "Mathematical Science Research Laboratory, Nikon Corporation",
+      "description": "Engaged in research and development of data science and machine learning."
     }
   ]
 }

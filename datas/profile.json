@@ -1,10 +1,10 @@
 {
-  "siteName": "勝村和也 (Katsumura Kazuya) - ポートフォリオ / Portfolio",
+  "siteName": "Kazuya Katsumura(勝村和也) - Portfolio",
   "heroImage": "images/hero/hero.jpg",
-  "name": "勝村 和也（カツムラ カズヤ）<br> Kazuya Katsumura",
-  "title": "リサーチエンジニア <br> Research Engineer",
-  "affiliation": "株式会社ニコン 数理技術研究所 <br> Nikon / Mathematical Research Research Laboratory",
-  "hobbies": "読書、自然散策、プログラミング、旅行、運動",
-  "comment": "こんにちは、勝村和也です。<br>企業でデータサイエンスや機械学習の研究開発に従事しています。<br>このポートフォリオでは、私の経歴、スキル、活動などを紹介しています。",
+  "name": "Kazuya Katsumura",
+  "title": "Research Engineer",
+  "affiliation": "Mathematical Science Research Laboratory, Nikon Corporation",
+  "hobbies": "Reading, Nature walks, Programming, Travel, Exercise",
+  "comment": "Hello, I'm Kazuya Katsumura.<br>I am engaged in research and development in data science and machine learning.<br>This portfolio showcases my background, skills, and activities.",
   "footer": "© 2026 My Portfolio. All rights reserved."
 }

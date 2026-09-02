@@ -2,30 +2,30 @@
   "skills": [
     {
       "name": "Python",
-      "description": "プログラミング言語Pythonのスキル",
-      "level": "中級",
-      "detail": "データサイエンス分野でPythonを使用した研究開発経験6年ほどがあります。",
+      "description": "Python programming skills",
+      "level": "Intermediate",
+      "detail": "Around 6 years of R&D experience using Python in data science.",
       "image": ""
     },
     {
       "name": "R",
-      "description": "統計解析言語Rのスキル",
-      "level": "中級",
-      "detail": "統計解析やデータ可視化にRを使用した経験があります。",
+      "description": "R programming skills for statistical computing",
+      "level": "Intermediate",
+      "detail": "Experience using R for statistical analysis and data visualization.",
       "image": ""
     },
     {
-      "name": "機械学習",
-      "description": "機械学習のスキル",
-      "level": "中級",
-      "detail": "深層学習や強化学習など、さまざまな機械学習手法を用いたプロジェクト経験があります。",
+      "name": "Machine Learning",
+      "description": "Machine learning skills",
+      "level": "Intermediate",
+      "detail": "Project experience utilizing various machine learning techniques, including deep learning and reinforcement learning.",
       "image": ""
     },
     {
-      "name": "生体信号解析",
-      "description": "生体信号解析のスキル",
-      "level": "中級",
-      "detail": "生体信号を扱った研究開発の経験があります。データの収集、処理、解析に関する知識があります。",
+      "name": "Biosignal Analysis",
+      "description": "Biological signal analysis skills",
+      "level": "Intermediate",
+      "detail": "R&D experience handling biological signals, with expertise in data collection, processing, and analysis.",
       "image": ""
     }
   ]

@@ -2,8 +2,15 @@
   "profileImages": [
     {
       "filename": "images/profile/introduction.jpg",
-      "comment": "プロフィール写真"
-    }
-  ]
+      "comment": "Profile Photo"
+    },
+    {
+      "filename": "images/profile/Akiyoshi.jpg",
+      "comment": "Akiyoshi Cave"
+    },
+    {
+      "filename": "images/profile/YokohamaStadium.JPG",
+      "comment": "Yokohama Stadium"
+    }  ]
 }
 

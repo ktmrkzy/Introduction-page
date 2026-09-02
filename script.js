@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // スライドショーの初期化
         showSlide(slideIndex);
     } catch (error) {
-        console.error('データの読み込みに失敗しました:', error);
+        console.error('failed to load data:', error);
     }
 });
 
@@ -36,11 +36,11 @@ async function loadJSON(path) {
     try {
         const response = await fetch(path);
         if (!response.ok) {
-            throw new Error(`HTTPエラー! ステータス: ${response.status}`);
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
         return await response.json();
     } catch (error) {
-        console.error(`${path}の読み込みに失敗しました:`, error);
+        console.error(`Failed to load ${path}:`, error);
         return {};
     }
 }
@@ -57,12 +57,12 @@ function renderProfile(data) {
         heroSection.style.backgroundPosition = 'center';
     }
     
-    document.getElementById('mainTitle').innerHTML = data.name || 'ようこそ';
-    document.getElementById('mainSubtitle').innerHTML = data.title || 'あなたの職業';
-    document.getElementById('profileName').innerHTML = data.name || '山田太郎';
-    document.getElementById('profileAffiliation').innerHTML = data.affiliation || '◯◯大学';
-    document.getElementById('profileHobbies').innerHTML = data.hobbies || 'プログラミング、読書';
-    document.getElementById('profileComment').innerHTML = data.comment || 'コメント';
+    document.getElementById('mainTitle').innerHTML = data.name || 'Welcome to My Portfolio';
+    document.getElementById('mainSubtitle').innerHTML = data.title || 'Your Profession';
+    document.getElementById('profileName').innerHTML = data.name || 'Yamada Tarou';
+    document.getElementById('profileAffiliation').innerHTML = data.affiliation || 'University of ○○';
+    document.getElementById('profileHobbies').innerHTML = data.hobbies || 'Programming, Reading';
+    document.getElementById('profileComment').innerHTML = data.comment || 'Comment';
     document.getElementById('footerText').textContent = data.footer || '© 2024 My Portfolio. All rights reserved.';
 }
 
@@ -80,7 +80,7 @@ function renderSkills(data) {
             skillCard.innerHTML = `
                 <h3>${skill.name}</h3>
                 <p>${skill.description}</p>
-                <div class="skill-level-badge">${skill.level || '未設定'}</div>
+                <div class="skill-level-badge">${skill.level || 'Not Set'}</div>
             `;
             container.appendChild(skillCard);
         });
@@ -90,8 +90,8 @@ function renderSkills(data) {
 // スキル詳細モーダルを開く
 function openSkillModal(skill) {
     document.getElementById('modalSkillName').innerHTML = skill.name;
-    document.getElementById('modalSkillLevel').textContent = skill.level || '未設定';
-    document.getElementById('modalSkillDetail').innerHTML = skill.detail || '詳しい説明がありません';
+    document.getElementById('modalSkillLevel').textContent = skill.level || 'Not Set';
+    document.getElementById('modalSkillDetail').innerHTML = skill.detail || 'No detailed description available';
     
     // 画像がある場合は表示、ない場合は非表示
     const imageElement = document.getElementById('modalSkillImage');
